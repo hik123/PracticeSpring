@@ -25,4 +25,12 @@
         WHERE iboard = #{iboard}
     </delete>
 
+    <update id="updBoard">
+        UPDATE board
+        SET title = #{title}
+        , ctnts = #{ctnts}
+        , writer = #{writer}
+        WHERE iboard = #{iboard}
+    </update>
+
 </mapper>

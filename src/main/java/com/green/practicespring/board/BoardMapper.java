@@ -3,6 +3,7 @@ package com.green.practicespring.board;
 
 import com.green.practicespring.board.model.BoardDetailVo;
 import com.green.practicespring.board.model.BoardInsDto;
+import com.green.practicespring.board.model.BoardUpdDto;
 import com.green.practicespring.board.model.BoardVo;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -17,6 +18,8 @@ public interface BoardMapper {
     int insBoard(BoardInsDto dto);
 
     int delBoard(int iboard);
+
+    int updBoard(BoardUpdDto dto);
 
 
 

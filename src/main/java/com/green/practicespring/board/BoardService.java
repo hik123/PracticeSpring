@@ -3,6 +3,7 @@ package com.green.practicespring.board;
 import com.green.practicespring.ResVo;
 import com.green.practicespring.board.model.BoardDetailVo;
 import com.green.practicespring.board.model.BoardInsDto;
+import com.green.practicespring.board.model.BoardUpdDto;
 import com.green.practicespring.board.model.BoardVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,10 @@ public class BoardService {
 
     public int delBoard(int iboard) {
         return mapper.delBoard(iboard);
+    }
+
+
+    public int updBoard(BoardUpdDto dto) {
+        return mapper.updBoard(dto);
     }
 }

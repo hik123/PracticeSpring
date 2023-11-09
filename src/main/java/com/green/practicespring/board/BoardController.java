@@ -3,6 +3,7 @@ package com.green.practicespring.board;
 import com.green.practicespring.ResVo;
 import com.green.practicespring.board.model.BoardDetailVo;
 import com.green.practicespring.board.model.BoardInsDto;
+import com.green.practicespring.board.model.BoardUpdDto;
 import com.green.practicespring.board.model.BoardVo;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,11 +36,17 @@ public class BoardController {
         return new ResVo(result);
     }
 
-
-
     @DeleteMapping("/board/{iboard}")
     public ResVo delBoard(@PathVariable int iboard) {
         int result = service.delBoard(iboard);
+        return new ResVo(result);
+    }
+
+
+
+    @PutMapping("/board")
+    public ResVo updBoard(BoardUpdDto dto) {
+        int result = service.updBoard(dto);
         return new ResVo(result);
     }
 
